@@ -11,6 +11,10 @@ public class HighHuman : Creature
         AjustJumpForce(5.0f);
         AjustJumpSpeed(5.0f);
     }
+    private void Update()
+    {
+        
+    }
     public void Run()
     {
         

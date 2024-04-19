@@ -4,10 +4,13 @@ using UnityEngine;
 
 public abstract class Creature : MonoBehaviour
 {
+    protected bool _moveAbility;
     protected float _speed;
+    protected bool _jumpAbility;
     protected float _jumpForce;
     protected float _jumpSpeed;
-    protected bool _jumpAbility;
+    //Use when we want some entity can drop in to pits and death
+    protected bool _isCurrentlyOnMovingPlatform;
     protected void AdjustSpeed(float speed)
     {
         this._speed = speed;
@@ -23,5 +26,9 @@ public abstract class Creature : MonoBehaviour
     protected void JumpAbility(bool canJump)
     {
         this._jumpAbility = canJump;
+    }
+    protected void isMovingOnPlatform(bool isCurrentlyOnMovingPlatform)
+    {
+        this._isCurrentlyOnMovingPlatform = isCurrentlyOnMovingPlatform;
     }
 }
