@@ -15,8 +15,4 @@ public class HighHuman : Creature
     {
         
     }
-    public void Run()
-    {
-        
-    }
 }

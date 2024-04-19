@@ -31,4 +31,5 @@ public abstract class Creature : MonoBehaviour
     {
         this._isCurrentlyOnMovingPlatform = isCurrentlyOnMovingPlatform;
     }
+    protected virtual void Moving() { }
 }

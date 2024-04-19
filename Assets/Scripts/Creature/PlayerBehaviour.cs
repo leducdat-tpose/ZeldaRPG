@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class PlayerBehaviour : HighHuman
 {
-    protected float _inputVertical;
-    protected float _inputHorizontal;
+    private Rigidbody2D _rb;
+    protected Vector2 _moveDirection;
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        AdjustSpeed(5.0f);
+    }
     private void Update()
     {
         UpdateInput();
     }
+    private void FixedUpdate()
+    {
+        Moving();
+    }
     private void UpdateInput()
     {
-        _inputVertical = Input.GetAxis("Vertical");
-        _inputHorizontal = Input.GetAxis("Horizontal");
+        _moveDirection.y = Input.GetAxis("Vertical");
+        _moveDirection.x = Input.GetAxis("Horizontal");
+    }
+    protected override void Moving()
+    {
+        if (_rb != null)
+        {
+            //_rb.MovePosition(_rb.position + this._speed * _moveDirection * Time.fixedDeltaTime);
+            _rb.velocity = _moveDirection * this._speed;
+        }
     }
 }
