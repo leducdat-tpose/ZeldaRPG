@@ -6,6 +6,26 @@ public class PlayerBehaviour : HighHuman
 {
     private Rigidbody2D _rb;
     protected Vector2 _moveDirection;
+    //*****ISingleton
+    public static PlayerBehaviour Instance { get; private set; }
+    public static bool IsInstantiated => Instance != null;
+    protected virtual void Awake()
+    {
+        if (IsInstantiated && Instance != (PlayerBehaviour)this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = (PlayerBehaviour)this;
+    }
+    protected virtual void OnDestroy()
+    {
+        if (Instance == (PlayerBehaviour)this)
+        {
+            Instance = null;
+        }
+    }
+    //*********
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
