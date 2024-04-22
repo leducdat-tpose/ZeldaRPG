@@ -4,28 +4,32 @@ using UnityEngine;
 
 public abstract class Creature : MonoBehaviour
 {
-    protected bool _moveAbility;
+    [Header("Attribute")]
+    protected float _maxHP;
+    protected float _maxMP;
     protected float _speed;
-    protected bool _jumpAbility;
-    protected float _jumpForce;
+    protected float _rollForce;
     protected float _jumpSpeed;
+    [Header("Ability")]
+    protected bool _moveAbility;
+    protected bool _rollAbility;
     //Use when we want some entity can drop in to pits and death
     protected bool _isCurrentlyOnMovingPlatform;
     protected void AdjustSpeed(float speed)
     {
         this._speed = speed;
     }
-    protected void AjustJumpForce(float jumpForce)
+    protected void AjustRollForce(float rollForce)
     {
-        this._jumpForce = jumpForce;
+        this._rollForce = rollForce;
     }
     protected void AjustJumpSpeed(float jumpSpeed)
     {
         this._jumpSpeed = jumpSpeed;
     }
-    protected void JumpAbility(bool canJump)
+    protected void RollAbility(bool canRoll)
     {
-        this._jumpAbility = canJump;
+        this._rollAbility = canRoll;
     }
     protected void isMovingOnPlatform(bool isCurrentlyOnMovingPlatform)
     {

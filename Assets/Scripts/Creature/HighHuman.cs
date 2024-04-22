@@ -6,10 +6,6 @@ public class HighHuman : Creature
 {
     private void Start()
     {
-        AdjustSpeed(7.0f);
-        JumpAbility(true);
-        AjustJumpForce(5.0f);
-        AjustJumpSpeed(5.0f);
     }
     private void Update()
     {
