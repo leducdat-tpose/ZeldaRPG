@@ -15,6 +15,15 @@ public abstract class Creature : MonoBehaviour
     protected bool _rollAbility;
     //Use when we want some entity can drop in to pits and death
     protected bool _isCurrentlyOnMovingPlatform;
+
+    protected void AdjustMaxHP(float hp)
+    {
+        this._maxHP = hp;
+    }
+    protected void AdjustMaxMP(float mp) {  
+        this._maxMP = mp;
+    }
+
     protected void AdjustSpeed(float speed)
     {
         this._speed = speed;
@@ -26,6 +35,10 @@ public abstract class Creature : MonoBehaviour
     protected void AjustJumpSpeed(float jumpSpeed)
     {
         this._jumpSpeed = jumpSpeed;
+    }
+    protected void MoveAbility(bool canMove)
+    {
+        this._moveAbility = canMove;
     }
     protected void RollAbility(bool canRoll)
     {

@@ -30,8 +30,10 @@ public class PlayerBehaviour : HighHuman
     {
         _rb = GetComponent<Rigidbody2D>();
         AdjustSpeed(5.0f);
+        AdjustMaxHP(100);
+        AdjustMaxMP(100);
+        MoveAbility(true);
         RollAbility(true);
-
     }
     private void Update()
     {
