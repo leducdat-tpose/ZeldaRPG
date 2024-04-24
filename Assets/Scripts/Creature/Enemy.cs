@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class Enemy: Creature
 {
+    private Rigidbody2D _rb;
+
+    public override void Moving()
+    {
+        base.Moving();
+    }
     private void Start()
     {
-        
+        _rb = GetComponent<Rigidbody2D>();
+
+        AdjustMaxHP(100);
+        AdjustMaxMP(100);
+        AdjustSpeed(6);
+        MoveAbility(true);
+        RollAbility(false);
     }
     private void Update()
     {
