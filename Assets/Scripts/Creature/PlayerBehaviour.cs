@@ -48,7 +48,7 @@ public class PlayerBehaviour : HighHuman
         _moveDirection.y = Input.GetAxis("Vertical");
         _moveDirection.x = Input.GetAxis("Horizontal");
     }
-    protected override void Moving()
+    public override void Moving()
     {
         if (_rb != null)
         {

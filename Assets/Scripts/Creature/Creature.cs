@@ -16,37 +16,36 @@ public abstract class Creature : MonoBehaviour
     //Use when we want some entity can drop in to pits and death
     protected bool _isCurrentlyOnMovingPlatform;
 
-    protected void AdjustMaxHP(float hp)
+    public void AdjustMaxHP(float hp)
     {
         this._maxHP = hp;
     }
-    protected void AdjustMaxMP(float mp) {  
+    public void AdjustMaxMP(float mp) {  
         this._maxMP = mp;
     }
 
-    protected void AdjustSpeed(float speed)
+    public void AdjustSpeed(float speed)
     {
         this._speed = speed;
     }
-    protected void AjustRollForce(float rollForce)
+    public void AjustRollForce(float rollForce)
     {
         this._rollForce = rollForce;
     }
-    protected void AjustJumpSpeed(float jumpSpeed)
+    public void AjustJumpSpeed(float jumpSpeed)
     {
         this._jumpSpeed = jumpSpeed;
     }
-    protected void MoveAbility(bool canMove)
+    public void MoveAbility(bool canMove)
     {
         this._moveAbility = canMove;
     }
-    protected void RollAbility(bool canRoll)
+    public void RollAbility(bool canRoll)
     {
         this._rollAbility = canRoll;
     }
-    protected void isMovingOnPlatform(bool isCurrentlyOnMovingPlatform)
-    {
+    public void isMovingOnPlatform(bool isCurrentlyOnMovingPlatform) {
         this._isCurrentlyOnMovingPlatform = isCurrentlyOnMovingPlatform;
     }
-    protected virtual void Moving() { }
+    public virtual void Moving() { }
 }
