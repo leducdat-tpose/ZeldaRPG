@@ -10,6 +10,7 @@ public class Enemy: Creature
     {
         base.Moving();
     }
+    //This just a script for every enemy, not a specific one
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
