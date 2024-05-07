@@ -16,7 +16,9 @@ public abstract class Creature : MonoBehaviour
     [SerializeField]
     protected float _jumpSpeed;
     [Header("Ability")]
+    [SerializeField]
     protected bool _moveAbility;
+    [SerializeField]
     protected bool _rollAbility;
     //Use when we want some entity can drop in to pits and death
     protected bool _isCurrentlyOnMovingPlatform;
