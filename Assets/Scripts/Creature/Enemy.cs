@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy: Creature
 {
     private Rigidbody2D _rb;
+    [SerializeField]
+    private float _attackDamage = 5.0f;
 
     public override void Moving()
     {

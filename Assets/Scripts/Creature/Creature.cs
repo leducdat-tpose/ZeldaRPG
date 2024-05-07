@@ -5,10 +5,15 @@ using UnityEngine;
 public abstract class Creature : MonoBehaviour
 {
     [Header("Attribute")]
+    [SerializeField]
     protected float _maxHP;
+    [SerializeField]
     protected float _maxMP;
+    [SerializeField]
     protected float _speed;
+    [SerializeField]
     protected float _rollForce;
+    [SerializeField]
     protected float _jumpSpeed;
     [Header("Ability")]
     protected bool _moveAbility;
